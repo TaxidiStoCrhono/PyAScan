@@ -10,11 +10,11 @@ import urllib.request
 # Descargar modelo si no existe
 MODEL_DIR = os.path.join(os.path.dirname(__file__), "model")
 os.makedirs(MODEL_DIR, exist_ok=True)
-MODEL_PATH = os.path.join(MODEL_DIR, "u2net.onnx")
+MODEL_PATH = os.path.join(MODEL_DIR, "u2netp.onnx")
 
 if not os.path.exists(MODEL_PATH):
     print("[INFO] Descargando modelo u2net.onnx...")
-    url = "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx"
+    url = "https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2netp.onnx"
     urllib.request.urlretrieve(url, MODEL_PATH)
     print("[INFO] Modelo descargado en:", MODEL_PATH)
 
