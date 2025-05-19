@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista Previa</title>
+</head>
+<body>
+  <h2>Vista Previa del Documento Detectado</h2>
+  {% for nombre in previews %}
+    <div>
+      <p>{{ nombre }}</p>
+      <img src="/static_output/{{ nombre }}" style="max-width: 500px;">
+    </div>
+  {% endfor %}
+  <form action="/resultado">
+    <button type="submit">Confirmar y Continuar</button>
+  </form>
+  <form action="/" method="get">
+    <button type="submit">Volver y Subir Nuevas Imágenes</button>
+  </form>
+</body>
+</html>
